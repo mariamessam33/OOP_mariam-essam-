@@ -1,0 +1,139 @@
+# OOP_mariam-essam-
+//Q1
+/*import java.util.Scanner;
+
+public class MultiplicationTable {
+ public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in); System.out.print("Enter an integer n: ");
+        int n = scanner.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= 10; j++) {
+    System.out.print((i * j) + "\t");
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}*\
+
+
+//Q2
+import java.util.Scanner;
+
+public class SumOfDigits {
+ public static void main(String[] args) {
+ Scanner scanner = newScanner(System.in);  System.out.print("Enter a positive integer: ");
+        int n = scanner.nextInt();
+        
+        int sum = 0;
+        int temp = n;
+
+        while (temp > 0) {
+            sum += temp % 10;
+   temp /= 10;    
+        }
+
+        System.out.println("The sum of the digits of " + n + " is: " + sum);
+        scanner.close();
+    }
+}
+
+//Q3
+public class RightAlignedTriangle {
+public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+       for (int j = 1; j <= n - i; j++) {
+      System.out.print(" ");
+            }
+     for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+//Q4
+import java.util.Scanner;
+
+public class NumberStats {
+  public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a positive integer (enter 0 to stop): ");
+        int num = scanner.nextInt();
+
+        if (num == 0) { System.out.println("No numbers were entered.");
+   scanner.close();
+            return;
+        }
+
+        int largest = num;
+        int smallest = num;
+        int sum = 0;
+        int count = 0;
+
+        while (num != 0) {
+            sum += num;
+            count++;
+
+            if (num > largest) {
+                largest = num;
+            }
+            if (num < smallest) {
+                smallest = num;
+            }
+ System.out.print("Enter next number (0 to stop): ");
+        num = scanner.nextInt();
+        }
+
+   double average = (double) sum / count;
+System.out.println("Largest number: " + largest);
+System.out.println("Smallest number: " + smallest);
+System.out.println("Average: " + average);
+
+        scanner.close();
+    }
+}
+
+
+//Q5
+public class NumberPattern {
+public static void main(String[] args) {
+ int n = 5;
+for (int i = 1; i <= n; i++) { 
+for (int j = 1; j <= i; j++) {
+  System.out.print(i);
+            }
+  System.out.println();
+        }
+    }
+}
+
+//Q6
+import java.util.Scanner;
+
+public class PerfectNumber {
+  public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter a positive integer n: ");
+        int n = scanner.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= n / 2; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == n && n > 0) { System.out.println(n + " is a perfect number.");
+        } 
+  else {
+  System.out.println(n + " is not a perfect number.");
+        }
+
+        scanner.close();
+    }
+}
